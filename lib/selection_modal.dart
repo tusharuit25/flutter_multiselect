@@ -159,7 +159,7 @@ class _SelectionModalState extends State<SelectionModal> {
                     size: 20.0,
                   ),
                   style: ElevatedButton.styleFrom(
-                      primary: widget.cancelButtonColor ?? Colors.grey.shade100,
+                      backgroundColor: widget.cancelButtonColor ?? Colors.grey.shade100,
                       onPrimary: widget.cancelButtonTextColor ?? Colors.black87),
                   onPressed: () {
                     Navigator.pop(context, null);
@@ -175,7 +175,7 @@ class _SelectionModalState extends State<SelectionModal> {
                     size: 20.0,
                   ),
                   style: ElevatedButton.styleFrom(
-                      primary: widget.clearButtonColor ?? Colors.black,
+                      backgroundColor: widget.clearButtonColor ?? Colors.black,
                       onPrimary: widget.clearButtonTextColor ?? Colors.white),
                   onPressed: () {
                     _clearSelection();
@@ -191,7 +191,7 @@ class _SelectionModalState extends State<SelectionModal> {
                     size: 20.0,
                   ),
                   style: ElevatedButton.styleFrom(
-                      primary: widget.saveButtonColor ?? Theme.of(context).colorScheme.primary,
+                      backgroundColor: widget.saveButtonColor ?? Theme.of(context).colorScheme.primary,
                       onPrimary: widget.saveButtonTextColor ?? Theme.of(context).colorScheme.onPrimary),
                   onPressed:
                       _localDataSourceWithState.where((item) => item['checked']).length <= (widget.maxLength ?? -1)
